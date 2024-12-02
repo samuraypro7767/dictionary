@@ -48,11 +48,11 @@ main{
     display: flex;
     align-items:center;
     justify-content:space-between;
-    padding: 0 20px;
+    padding: 0 10rem;
   }
 
 .translate{
-    width: 35%;
+    width: 25%;
     height: 80%;
     background-color: #11171f;
     border-radius: 15px;
@@ -63,39 +63,33 @@ main{
     justify-content:flex-start;
     padding: 10px 10px;
 }
-
-.dictionary {
-    width: 60%;
+.dictionary{
+    width: 30%;
     height: 80%;
-    background-color: #6d6d6d;
+    background-color: #11171f;
     border-radius: 15px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:flex-start;
+    padding: 10px 5px;
 }
-
-.title-container {
+.title-container,.title-dictionary {
     text-align: center;
-    font-size: 35px;
     background: var(--gradient-2);
     -webkit-background-clip: text;
+    font-size: 30px;
     background-clip: text;
     color: transparent;
-    height: 20%;
+    height: 10%;
     width: 100%;
+}
+.title-container{
+    font-size: 35px;
+    height: 20%;
 }
 
-.title-dictionary {
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #161a1d;
-    color: hsl(156, 4%, 46%);
-    border-radius:  15px  15px 0 0;
-    height: 12%;
-    width: 100%;
-}
 
 .container-category{
     width: 100%;
@@ -103,13 +97,16 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 10px;
-    gap: 10px;
+    padding: 5px 5px;
+    gap: 5px;
 }
 .container-category > h3{
-    color: #124947;
+    color: white;
     font-size: 25px;
     font-style: italic;
+    width: 100%;
+    text-align: center;
+    height: 30%;
 }
 
 .radio-category{
@@ -117,11 +114,11 @@ main{
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
-    color: #c3dddc;
+    color: #ffffff;
     justify-content: space-evenly;
 }
 .radio-category > label{
-    background-color: #161a1d;
+    background: var(--gradient-2) ;
    padding: 10px 20px ;
    display: flex;
    flex-wrap: wrap;
@@ -133,10 +130,119 @@ main{
 }
 .table-result{
     width: 95%;
+    height: 50%;
+    padding: 20px;
+}
+.table-result > h2{
+    text-align: center;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    font-size: 30px;
+    background-clip: text;
+    color: transparent;
+    height: 30%;
+    width: 100%;
+}
+
+.addWord{
+    width: 30%;
+    height: 80%;
+    background-color: #11171f;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    padding: 10px 5px;
+}
+
+.addWord > h2{
+    text-align: center;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    font-size: 30px;
+    background-clip: text;
+    color: transparent;
+    height: 10%;
+    width: 100%;
 }
 
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    width: 90%;
+    height: 100%;
+    
+}
+form > .input-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color:#2F3640 ;
+    border-radius: 20px 20px;
+    cursor: pointer;
+
+}
+.input-container > input {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  position: relative;
+  top: -10px;
+  background-color: transparent;
+  outline: none;
+  padding: 20px 20px;
+  cursor: pointer;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.input-container > label{
+    position: relative;
+    top: 20px;
+    left: 10px;
+    color: #b6b4b4;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
 
 
+.input-container > input[type="text"]:focus + label,
+.input-container > input[type="text"]:valid + label {
+    top: -20px;
+    left: 10px;
+    font-size: 15px;
+    color: #4ea5db;
+}
 
-
+.buttonAdd,.buttonOrder{
+    width: 75%;
+    height: 2rem;
+    border-radius:20px  ;
+    background-color: #2F3640;
+    color: rgb(253, 253, 253);
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    border: none;
+    border: 1px solid #124947 ;
+}
+.buttonAdd:hover,.buttonOrder:hover{
+    background-color: #124947;
+}

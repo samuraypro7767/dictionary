@@ -14,6 +14,33 @@
         <h1>Diccionario</h1>
     </header>
     <main>
+        
+       
+        <section class="dictionary">
+            
+            <h2 class="title-dictionary">Diccionario de palabras</h2>
+            
+            <div class="container-category">
+            <h3 class="title-category">Categorías</h3>
+            <div class="radio-category">
+                <label><input type="radio" name="category" value="fruits"> Frutas</label>
+                <label><input type="radio" name="category" value="colors"> Colores</label>
+                <label><input type="radio" name="category" value="animals"> Animales</label>
+                <label><input type="radio" name="category" value="physical_descriptions"> Descripciones físicas</label>
+                <label><input type="radio" name="category" value="skills"> Habilidades</label>
+                <label><input type="radio" name="category" value="verbs"> Acciones</label>
+            </div>
+            </div>
+        
+            <div class="table-result">
+                <h2>Palabras</h2>
+                <p>Selecciona una categoría para ver las palabras.</p>
+            </div>
+
+            <button type="button" class="buttonOrder">Ordenar A - Z</button>
+
+        </section>
+
         <section class="translate">
 
             <h2 class="title-container">Traductor</h2>
@@ -73,31 +100,35 @@
             </div>
         </section>
 
-        <!-- <section class="addWord"></section> -->
-        <section class="dictionary">
+        <section class="addWord">
+            <h2>Agregar Palabra:</h2>
+            <form>
+                <div class="input-container">
+                    <input type="text" name="spanishWord" id="spanishWord" required>
+                    <label for="spanishWord">Ingrese la palabra en Español</label>
+                </div>
             
-            <h2 class="title-dictionary">Diccionario de palabras</h2>
+                <div class="input-container">
+                    <input type="text" name="englishWord" id="englishWord" required>
+                    <label for="englishWord">Ingresar la palabra en Inglés</label>
+                </div>
             
-            <div class="container-category">
-            <h3 class="title-category">Categorías</h3>
-            <div class="radio-category">
-                <label><input type="radio" name="category" value="fruits"> Frutas</label>
-                <label><input type="radio" name="category" value="colors"> Colores</label>
-                <label><input type="radio" name="category" value="animals"> Animales</label>
-                <label><input type="radio" name="category" value="physical_descriptions"> Descripciones físicas</label>
-                <label><input type="radio" name="category" value="skills"> Habilidades</label>
-                <label><input type="radio" name="category" value="verbs"> Acciones</label>
-            </div>
-            </div>
-        
-            <div class="table-result">
-                <h1>Palabras</h1>
-                <p>Selecciona una categoría para ver las palabras.</p>
-            </div>
-
-            <button type="button">Ordenar A - Z</button>
-
-        </section>
+                <div class="input-container">
+                    <input type="text" name="exampleSentence" id="exampleSentence" required>
+                    <label for="exampleSentence">Ingresar un ejemplo</label>
+                </div>
+            
+                <div class="radio-category">
+                    <div class="radio-category">
+                        <label><input type="radio" name="category" value="fruits"> Frutas</label>
+                        <label><input type="radio" name="category" value="colors"> Colores</label>
+                        <label><input type="radio" name="category" value="animals"> Animales</label>
+                        <label><input type="radio" name="category" value="physical_descriptions"> Descripciones físicas</label>
+                        <label><input type="radio" name="category" value="skills"> Habilidades</label>
+                        <label><input type="radio" name="category" value="verbs"> Acciones</label>
+                    </div>
+                    <button type="button" class="buttonAdd"> Agregar</button>
+                </section>
     </main>
 
     <footer>
