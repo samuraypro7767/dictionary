@@ -89,8 +89,6 @@ main{
     font-size: 35px;
     height: 20%;
 }
-
-
 .container-category{
     width: 100%;
     min-height: 40%;
@@ -113,9 +111,10 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 15px;
     color: #ffffff;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 10px;
+
 }
 .radio-category > label{
     background: var(--gradient-2) ;
@@ -154,7 +153,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content:flex-start;
-    padding: 10px 5px;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0px;
 }
 
 .addWord > h2{
@@ -245,4 +245,106 @@ form > .input-container{
 }
 .buttonAdd:hover,.buttonOrder:hover{
     background-color: #124947;
+}
+
+@media screen and (min-width:1355px) and (max-width:1499px ){
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header > h1{
+        font-size: 2rem;
+        
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer > h2{
+        font-size: 1rem;
+        
+    }
+    .translate{
+        width: 30%;
+    }
+    .title-container,.title-dictionary {
+        font-size: 1.6rem;
+    }
+    .title-container{
+        font-size: 2rem;
+    }
+    .container-category > h3{
+        color: white;
+        font-size:1.2rem;
+    }
+    .radio-category{
+        gap: 10px;
+    }
+    .radio-category > label{
+       padding: 5px 10px ;
+       justify-content: center;
+       gap:2px;
+       border-radius: 50px 50px;
+    }
+    .table-result{
+        width: 100%;
+        padding: 10px;
+    }
+    .table-result > h2{
+        font-size: 1.7rem;
+      
+    }
+  
+    .addWord > h2{
+        font-size: 1.6rem;
+        height: 3.5rem;
+    }
+    
+    form {
+        
+        gap: 20px;
+        width: 90%;
+        height: 100%;
+        
+    }
+    form > .input-container{
+        border-radius: 20px 20px;
+        cursor: pointer;
+        height: 2rem;
+        font-size: 14px;
+        
+        
+    }
+
+    .input-container > input {
+        height: 1rem;
+        top: 5px;
+      
+      }
+      
+      .input-container > label{
+          top: 30px;
+
+      }
+      .input-container {
+        margin-bottom: 0px;
+    }
+    .input-container > input[type="text"]:focus + label,
+.input-container > input[type="text"]:valid + label {
+    top: 6px;
+    font-size: 10px;
+    color: #4ea5db;
+
+}
+
+.buttonAdd,.buttonOrder{
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    border: none;
+}
+
 }
