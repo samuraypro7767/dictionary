@@ -269,6 +269,7 @@ form > .input-container{
     }
     .translate{
         width: 30%;
+        padding: 10px 10px;
     }
     .title-container,.title-dictionary {
         font-size: 1.6rem;
