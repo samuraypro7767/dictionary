@@ -14,14 +14,14 @@
         <h1>Diccionario</h1>
     </header>
     <main>
-        <section class="translatte">
+        <section class="translate">
 
             <h2 class="title-container">Traductor</h2>
 
             <div class="Container-search">
                 <div class="searchBox">
 
-                    <input class="searchInput" type="text" name="word" placeholder="Escribe una palabra">
+                    <input class="searchInput" type="text" name="word" placeholder="Escribe una palabra" >
 
                     <button class="searchButton" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
@@ -55,11 +55,11 @@
                                         transform="translate(0.403503 0.526367)"></rect>
                                 </clipPath>
                             </defs>
-                        </svg>
+                        </svg> Buscar
                     </button>
                 </div>
 
-                <div class="container-radio"></div>
+                <div id="container-radio">
                     <label><input type="radio" name="language" value="en-es"> Inglés a Español</label>
                     <label><input type="radio" name="language" value="es-en"> Español a Inglés</label>
                 </div>
@@ -76,17 +76,18 @@
         <!-- <section class="addWord"></section> -->
         <section class="dictionary">
             
-            <h2 class="title-container">Diccionario de palabras</h2>
+            <h2 class="title-dictionary">Diccionario de palabras</h2>
             
-            <div class="radio-category">
+            <div class="container-category">
             <h3 class="title-category">Categorías</h3>
-          
+            <div class="radio-category">
                 <label><input type="radio" name="category" value="fruits"> Frutas</label>
                 <label><input type="radio" name="category" value="colors"> Colores</label>
                 <label><input type="radio" name="category" value="animals"> Animales</label>
                 <label><input type="radio" name="category" value="physical_descriptions"> Descripciones físicas</label>
                 <label><input type="radio" name="category" value="skills"> Habilidades</label>
                 <label><input type="radio" name="category" value="verbs"> Acciones</label>
+            </div>
             </div>
         
             <div class="table-result">
@@ -101,7 +102,7 @@
 
     <footer>
         <h2>Sebastian Osorio Diaz</h1>
-            <h2>ADSO - 2901723</h3>
+            <h3>ADSO - 2901723</h3>
     </footer>
 
     <script src="js/app.js" type="module"></script>
