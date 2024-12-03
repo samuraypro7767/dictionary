@@ -12,6 +12,8 @@ body{
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color:#363e43;
+    display: flex;
+    flex-direction: column;
 }
 
 header,footer{
@@ -19,9 +21,17 @@ header,footer{
     height: 10%;
     background-color: #161a1d;
     text-align: center;
-    top:0;
+    position: static;
+    
     
 }
+ul{
+    width: 100%;
+}
+li{
+    font-size: 16px;
+}
+
 header > h1{
     font-size: 50px;
     background: var(--gradient-2); 
@@ -44,7 +54,7 @@ footer > h3{
 
 main{
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     align-items:center;
     justify-content:space-between;
@@ -64,8 +74,9 @@ main{
     padding: 10px 10px;
 }
 .dictionary{
+    min-height: 80%;
     width: 30%;
-    height: 80%;
+    height:auto;
     background-color: #11171f;
     border-radius: 15px;
     color: rgb(255, 255, 255);
@@ -127,19 +138,20 @@ main{
    border-radius: 50px 50px;
    
 }
-.table-result{
+.board-result{
     width: 95%;
-    height: 50%;
+    height: 0 auto;
     padding: 20px;
+    
 }
-.table-result > h2{
+.board-result > h2{
     text-align: center;
     background: var(--gradient-2);
     -webkit-background-clip: text;
     font-size: 30px;
     background-clip: text;
     color: transparent;
-    height: 30%;
+    height: 40%;
     width: 100%;
 }
 
@@ -241,10 +253,13 @@ form > .input-container{
     font-weight: 100;
     font-style: italic;
     border: none;
-    border: 1px solid #124947 ;
 }
 .buttonAdd:hover,.buttonOrder:hover{
     background-color: #124947;
+}
+.resultWord-search h4 {
+    color: #b3b8b7;  
+    margin-top: 10px;
 }
 
 @media screen and (min-width:1355px) and (max-width:1499px ){
@@ -267,6 +282,7 @@ form > .input-container{
         font-size: 1rem;
         
     }
+    
     .translate{
         width: 30%;
         padding: 10px 10px;
@@ -283,22 +299,33 @@ form > .input-container{
     }
     .radio-category{
         gap: 10px;
+        justify-content:center;
+        width: 100%;
+        padding: 0;
     }
     .radio-category > label{
        padding: 5px 10px ;
        justify-content: center;
        gap:2px;
        border-radius: 50px 50px;
+       color: black;
     }
-    .table-result{
+    .board-result{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        padding: 10px;
     }
-    .table-result > h2{
+    .board-result > h2{
         font-size: 1.7rem;
       
     }
-  
+
+    ul>li{
+        color: #9aa1aa;
+        list-style: var(--gradient-2);
+    }
+ 
     .addWord > h2{
         font-size: 1.6rem;
         height: 3.5rem;

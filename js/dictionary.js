@@ -1,4 +1,4 @@
-export const dictionary = {
+ const dictionary = {
     categories: {
       animals: [
         { "id": 1, "english": "Dog", "spanish": "Perro", "example": "The dog is barking." },
@@ -79,4 +79,5 @@ export const dictionary = {
         { "id": 5, "english": "Work", "spanish": "Trabajar", "example": "He works in an office." }
       ]
     }
-  }
+  } 
+  export default dictionary;
