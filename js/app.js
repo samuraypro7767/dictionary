@@ -1,15 +1,5 @@
   import dictionary from './dictionary.js';
 
-
- 
-  
-
-
-
-
-
-
-
   function display(){
     if (document.querySelector('input[name="category"]:checked')) {
   const SelectCategory = document.querySelector('input[name = "category"]:checked').value;
@@ -64,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //-----------------------------------------translate-------------------------------------------------//
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const translateButton = document.querySelector('.searchButton');
   translateButton.addEventListener('click', translationWord);
@@ -107,3 +98,51 @@ function translationWord() {
       resultElement.textContent = `No se encontró la palabra "${searchInput}" en el diccionario.`;
   }
 }
+
+
+//-----------------------------------------Form Add-------------------------------------------------//
+
+document.addEventListener('DOMContentLoaded', () => {
+    const addWordForm = document.getElementById('addWordForm');
+
+    addWordForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const newWord = document.getElementById('spanishWord').value.trim();
+        const translation = document.getElementById('englishWord').value.trim();
+        const addExample = document.getElementById('exampleSentence').value.trim();
+        const selectedCategory = document.querySelector('input[name="newCategory"]:checked');
+
+        if (!newWord || !translation || !addExample) {
+            alert("Por favor, ingresa todos los campos.");
+            return;
+        }else if (!selectedCategory) {
+            alert("Por favor, selecciona una categoría.");
+            return;
+        }
+
+        const categoryValue = selectedCategory.value;
+
+        if (!dictionary.categories.hasOwnProperty(categoryValue)) {
+            alert("La categoría seleccionada no existe.");
+            return;
+        }
+
+        const newEntry = {
+            id: dictionary.categories[categoryValue].length + 1,
+            english: translation,
+            spanish: newWord,
+            example: addExample
+        };
+
+        dictionary.categories[categoryValue].push(newEntry);
+
+        document.getElementById('spanishWord').value = "";
+        document.getElementById('englishWord').value = "";
+        document.getElementById('exampleSentence').value = "";
+
+        display(); 
+
+        alert(`La palabra "${newWord}" ha sido añadida correctamente.`);
+    });
+});

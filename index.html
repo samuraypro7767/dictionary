@@ -80,7 +80,7 @@
                 </div>
             
                 <div class="container-radio">
-                    <label><input type="radio" value="en-es" name="language" checked> Inglés a Español</label>
+                    <label><input type="radio" value="en-es" name="language"> Inglés a Español</label>
                     <label><input type="radio" value="es-en" name="language"> Español a Inglés</label>
                 </div>
             
@@ -94,7 +94,7 @@
 
         <section class="addWord">
             <h2>Agregar Palabra</h2>
-            <form>
+            <form id="addWordForm">
                 <div class="input-container">
                     <input type="text" name="spanishWord" id="spanishWord" required>
                     <label for="spanishWord">Ingrese la palabra en Español</label>
@@ -111,14 +111,14 @@
                 </div>
             
                     <div class="radio-category" id="radioCategoryForm">
-                        <label><input type="radio" name="category" value="fruits"> Frutas</label>
-                        <label><input type="radio" name="category" value="colors"> Colores</label>
-                        <label><input type="radio" name="category" value="animals"> Animales</label>
-                        <label><input type="radio" name="category" value="physical_descriptions"> Descripciones físicas</label>
-                        <label><input type="radio" name="category" value="skills"> Habilidades</label>
-                        <label><input type="radio" name="category" value="verbs"> Acciones</label>
+                        <label><input type="radio" name="newCategory" value="fruits"> Frutas</label>
+                        <label><input type="radio" name="newCategory" value="colors"> Colores</label>
+                        <label><input type="radio" name="newCategory" value="animals"> Animales</label>
+                        <label><input type="radio" name="newCategory" value="physical_descriptions"> Descripciones físicas</label>
+                        <label><input type="radio" name="newCategory" value="skills"> Habilidades</label>
+                        <label><input type="radio" name="newCategory" value="verbs"> Acciones</label>
                     </div>
-                    <button type="button" class="buttonAdd">Agregar</button>
+                    <button type="submit" class="buttonAdd">Agregar</button>
                 </section>
     </main>
 
